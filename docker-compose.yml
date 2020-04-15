@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+
+    serviceOne:
+        image: spring_compose_service_one    
+        build: 
+               context: ./dockerprojectServiceOne
+               dockerfile: Dockerfile
+        ports:
+        - "2001:2001"
+        
+    serviceTwo:
+        image: spring_compose_service_two    
+        build: 
+               context: ./dockerprojectServiceTwo
+               dockerfile: Dockerfile
+        ports:
+        - "2002:2002"
